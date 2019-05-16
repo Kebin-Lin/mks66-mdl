@@ -107,8 +107,8 @@ def run(filename):
             tmp = []
 
         elif currOp == 'line':
-            add_edge( edges, args[0], args[1], args[2], args[3], args[4], args[5] )
-            matrix_mult( stack[-1], edges )
+            add_edge( tmp, args[0], args[1], args[2], args[3], args[4], args[5] )
+            matrix_mult( stack[-1], tmp )
             draw_lines(tmp, screen, zbuffer, color)
             tmp = []
 
@@ -117,5 +117,9 @@ def run(filename):
                 display(screen)
             else:
                 save_extension(screen, args[0] + '.png')
+
+        elif currOp == 'clear':
+            clear_screen(screen)
+            clear_zbuffer(zbuffer)
 
         print command
