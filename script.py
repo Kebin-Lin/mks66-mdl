@@ -118,8 +118,4 @@ def run(filename):
             else:
                 save_extension(screen, args[0] + '.png')
 
-        elif currOp == 'clear':
-            clear_screen(screen)
-            clear_zbuffer(zbuffer)
-
         print command
